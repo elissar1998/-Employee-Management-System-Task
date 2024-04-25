@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\DepartmentController;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentTestController;
+use App\Http\Controllers\EmployeeTestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/departments', [DepartmentController::class , 'index']);
-Route::get('/employees'  ,[EmployeeController::class,'index']);
+Route::get('/departments', [DepartmentTestController::class , 'index']);
+Route::get('/employees'  ,[EmployeeTestController::class,'index']);
