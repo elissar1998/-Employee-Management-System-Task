@@ -3,6 +3,7 @@
 use App\Http\Controllers\DepartmentTestController;
 use App\Http\Controllers\EmployeeTestController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/register',function()
+{
+    return view('register');
 });
 Route::get('/departments', [DepartmentTestController::class , 'index']);
 Route::get('/employees'  ,[EmployeeTestController::class,'index']);
+
