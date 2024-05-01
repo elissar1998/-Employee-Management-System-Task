@@ -16,12 +16,18 @@ use App\Http\Controllers\API\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/register',function()
 {
     return view('register');
+});
+Route::get('/login',function(){
+    return view( 'login');
+});
+Route::get('/profile',function(){
+    return view( 'Profile');
 });
 Route::get('/departments', [DepartmentTestController::class , 'index']);
 Route::get('/employees'  ,[EmployeeTestController::class,'index']);
